@@ -527,7 +527,7 @@ body.nav-active { overflow: hidden; }
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gold-crayola);
+  /* background-color: var(--gold-crayola); */
   z-index: 10;
   display: grid;
   place-content: center;
