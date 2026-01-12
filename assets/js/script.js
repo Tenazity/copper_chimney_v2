@@ -1,170 +1,238 @@
 'use strict';
 
+// Wait for GSAP libraries to load
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  /**
+   * INITIALIZE PAGE (replaces preloader functionality)
+   */
+  window.addEventListener("load", function () {
+    // Add loaded class to body to enable scrolling and show header/topbar
+    document.body.classList.add("loaded");
+    
+    // Start initial animations on page load
+    initHeroAnimations();
+  });
+
+  /**
+   * HERO ANIMATIONS
+   */
+  /**
+   * HERO ANIMATIONS - 3D Replaces this
+   */
+  // Slider logic removed as 3D model replaces it.
+  // Animations for text entry could be re-added here if targeting specific new classes,
+  // but existing ScrollTrigger setup below handles generic section headings.
+
+  // Initialize Simple Text Animations for 3D Hero on Load
+  const initHeroAnimations = () => {
+    const heroReveal = document.querySelectorAll(".hero-3d .slider-reveal");
+    if (heroReveal.length) {
+      gsap.from(heroReveal, {
+        y: 50,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.2,
+        ease: "power3.out",
+        delay: 0.5
+      });
+    }
+  };
 
 
-/**
- * PRELOAD
- * 
- * loading will be end after document is loaded
- */
+  /**
+   * SCROLL ANIMATIONS (ScrollTrigger)
+   */
 
-const preloader = document.querySelector("[data-preaload]");
+  // Animate Section Titles and Subtitles
+  const sectionHeadings = document.querySelectorAll(".section-title, .section-subtitle");
+  sectionHeadings.forEach(heading => {
+    gsap.from(heading, {
+      scrollTrigger: {
+        trigger: heading,
+        start: "top 85%",
+        toggleActions: "play none none reverse"
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out"
+    });
+  });
 
-window.addEventListener("load", function () {
-  preloader.classList.add("loaded");
-  document.body.classList.add("loaded");
-});
+  // Animate Service Cards (Staggered)
+  const serviceCards = document.querySelectorAll(".service-card");
+  gsap.from(serviceCards, {
+    scrollTrigger: {
+      trigger: ".service-list", // Assuming a wrapper or using the first card
+      trigger: serviceCards[0],
+      start: "top 85%",
+    },
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out"
+  });
 
+  // Animate Menu Cards
+  const menuCards = document.querySelectorAll(".menu-card");
+  gsap.from(menuCards, {
+    scrollTrigger: {
+      trigger: ".menu .grid-list",
+      start: "top 80%"
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "back.out(1.7)"
+  });
 
-
-/**
- * add event listener on multiple elements
- */
-
-const addEventOnElements = function (elements, eventType, callback) {
-  for (let i = 0, len = elements.length; i < len; i++) {
-    elements[i].addEventListener(eventType, callback);
-  }
-}
-
-
-
-/**
- * NAVBAR
- */
-
-const navbar = document.querySelector("[data-navbar]");
-const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const overlay = document.querySelector("[data-overlay]");
-
-const toggleNavbar = function () {
-  navbar.classList.toggle("active");
-  overlay.classList.toggle("active");
-  document.body.classList.toggle("nav-active");
-}
-
-addEventOnElements(navTogglers, "click", toggleNavbar);
-
-
-
-/**
- * HEADER & BACK TOP BTN
- */
-
-const header = document.querySelector("[data-header]");
-const backTopBtn = document.querySelector("[data-back-top-btn]");
-
-let lastScrollPos = 0;
-
-const hideHeader = function () {
-  const isScrollBottom = lastScrollPos < window.scrollY;
-  if (isScrollBottom) {
-    header.classList.add("hide");
-  } else {
-    header.classList.remove("hide");
-  }
-
-  lastScrollPos = window.scrollY;
-}
-
-window.addEventListener("scroll", function () {
-  if (window.scrollY >= 50) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-    hideHeader();
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-  }
-});
-
-
-
-/**
- * HERO SLIDER
- */
-
-const heroSlider = document.querySelector("[data-hero-slider]");
-const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
-const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
-const heroSliderNextBtn = document.querySelector("[data-next-btn]");
-
-let currentSlidePos = 0;
-let lastActiveSliderItem = heroSliderItems[0];
-
-const updateSliderPos = function () {
-  lastActiveSliderItem.classList.remove("active");
-  heroSliderItems[currentSlidePos].classList.add("active");
-  lastActiveSliderItem = heroSliderItems[currentSlidePos];
-}
-
-const slideNext = function () {
-  if (currentSlidePos >= heroSliderItems.length - 1) {
-    currentSlidePos = 0;
-  } else {
-    currentSlidePos++;
-  }
-
-  updateSliderPos();
-}
-
-heroSliderNextBtn.addEventListener("click", slideNext);
-
-const slidePrev = function () {
-  if (currentSlidePos <= 0) {
-    currentSlidePos = heroSliderItems.length - 1;
-  } else {
-    currentSlidePos--;
+  // Animate Special Dish Image
+  const specialDishBanner = document.querySelector(".special-dish-banner img");
+  if (specialDishBanner) {
+    gsap.from(specialDishBanner, {
+      scrollTrigger: {
+        trigger: ".special-dish",
+        start: "top 70%",
+        scrub: 1
+      },
+      scale: 1.2,
+      y: 100
+    });
   }
 
-  updateSliderPos();
-}
+  // Parallax for About Banner
+  const aboutBanner = document.querySelector(".about-banner");
+  if (aboutBanner) {
+    gsap.to(".about-banner img", {
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      },
+      y: -50
+    });
+  }
 
-heroSliderPrevBtn.addEventListener("click", slidePrev);
+  /**
+   * NAVBAR INTERACTIONS
+   */
+  const navbar = document.querySelector("[data-navbar]");
+  const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+  const overlay = document.querySelector("[data-overlay]");
 
-/**
- * auto slide
- */
+  const toggleNavbar = () => {
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("nav-active");
+  }
 
-let autoSlideInterval;
+  navTogglers.forEach(btn => btn.addEventListener("click", toggleNavbar));
 
-const autoSlide = function () {
-  autoSlideInterval = setInterval(function () {
-    slideNext();
-  }, 7000);
-}
+  /**
+   * HEADER & BACK TO TOP
+   */
+  const header = document.querySelector("[data-header]");
+  const backTopBtn = document.querySelector("[data-back-top-btn]");
+  let lastScrollPos = 0;
 
-addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
-  clearInterval(autoSlideInterval);
-});
+  window.addEventListener("scroll", function () {
+    if (window.scrollY >= 50) {
+      header.classList.add("active");
+      backTopBtn.classList.add("active");
 
-addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
+      // Hide header on scroll down, show on scroll up
+      if (lastScrollPos < window.scrollY) {
+        header.classList.add("hide");
+      } else {
+        header.classList.remove("hide");
+      }
+    } else {
+      header.classList.remove("active");
+      backTopBtn.classList.remove("active");
+    }
+    lastScrollPos = window.scrollY;
+  });
 
-window.addEventListener("load", autoSlide);
 
+  /**
+   * MOUSE MOVE EFFECT FOR SHAPES
+   */
+  document.addEventListener("mousemove", (e) => {
+    const shapes = document.querySelectorAll(".shape");
+    const x = (e.clientX * 0.05);
+    const y = (e.clientY * 0.05);
 
+    shapes.forEach(shape => {
+      gsap.to(shape, {
+        x: x,
+        y: y,
+        duration: 1,
+        ease: "power2.out"
+      });
+    });
+  });
 
-/**
- * PARALLAX EFFECT
- */
+  /**
+   * MAGNETIC BUTTON EFFECT
+   */
+  const buttons = document.querySelectorAll(".btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
 
-const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+      gsap.to(btn, {
+        x: x * 0.3,
+        y: y * 0.3,
+        duration: 0.3,
+        ease: "power2.out"
+      });
+    });
 
-let x, y;
+    btn.addEventListener("mouseleave", () => {
+      gsap.to(btn, {
+        x: 0,
+        y: 0,
+        duration: 0.5,
+        ease: "elastic.out(1, 0.5)"
+      });
+    });
+  });
 
-window.addEventListener("mousemove", function (event) {
+  /**
+   * BOOKING MODAL
+   */
+  const bookingModal = document.querySelector("[data-modal]");
+  const bookingModalTogglers = document.querySelectorAll("[data-booking-modal-toggler]");
+  const bookingModalCloseBtn = document.querySelector("[data-modal-close-btn]");
+  const bookingModalOverlay = document.querySelector("[data-modal-overlay]");
 
-  x = (event.clientX / window.innerWidth * 10) - 5;
-  y = (event.clientY / window.innerHeight * 10) - 5;
+  const toggleModal = function () {
+    bookingModal.classList.toggle("active");
+    document.body.classList.toggle("modal-active");
+  }
 
-  // reverse the number eg. 20 -> -20, -5 -> 5
-  x = x - (x * 2);
-  y = y - (y * 2);
+  if (bookingModalTogglers) {
+    bookingModalTogglers.forEach(toggler => {
+      toggler.addEventListener("click", function (e) {
+        e.preventDefault();
+        toggleModal();
+      });
+    });
+  }
 
-  for (let i = 0, len = parallaxItems.length; i < len; i++) {
-    x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
-    y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
-    parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+  if (bookingModalCloseBtn) {
+    bookingModalCloseBtn.addEventListener("click", toggleModal);
+  }
+
+  if (bookingModalOverlay) {
+    bookingModalOverlay.addEventListener("click", toggleModal);
   }
 
 });

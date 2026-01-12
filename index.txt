@@ -1,4 +1,4 @@
-Saanchii's - Amazing & Delicious Food
+Copper Chimney - Amazing & Delicious Food
 
 This is a Restaurant html template made by codewithsadee
 
@@ -22,7 +22,7 @@ booking@restaurant.com
 
 #---------- HEADER ----------#
 
-alt = Saanchii's - Home
+alt = Copper Chimney - Home
 
 aria-label = close menu
 <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -40,7 +40,7 @@ London 9578, UK
 
 Open: 9.30 am - 2.30pm
 
-booking@Saanchii's.com
+booking@Copper Chimney.com
 
 Booking Request
 +88-123-123456
@@ -307,11 +307,11 @@ View Our Blog
 
 #---------- FOOTER ----------#
 
-alt = Saanchii's home
+alt = Copper Chimney home
 
 Restaurant St, Delicious City, London 9578, UK
 
-booking@Saanchii's.com
+booking@Copper Chimney.com
 
 Booking Request : +88-123-123456
 
@@ -339,7 +339,7 @@ Twitter
 Youtube
 Google Map
 
-&copy; 2022 Saanchii's. All Rights Reserved | Crafted by
+&copy; 2022 Copper Chimney. All Rights Reserved | Crafted by
 
 https://github.com/codewithsadee
 

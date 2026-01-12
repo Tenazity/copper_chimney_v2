@@ -1,19 +1,19 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/Saanchii's)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/Saanchii's?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/Saanchii's?style=social)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/Copper Chimney)
+  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/Copper Chimney?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/Copper Chimney?style=social)
 [![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
   [![YouTube Video Views](https://img.shields.io/youtube/views/CjVGp5kGHxA?style=social)](https://youtu.be/CjVGp5kGHxA)
 
   <br />
   <br />
 
-  <h2 align="center">Saanchii's - Restaurant Website</h2>
+  <h2 align="center">Copper Chimney - Restaurant Website</h2>
 
-  Saanchii's is a fully responsive restaurant website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+  Copper Chimney is a fully responsive restaurant website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-  <a href="https://codewithsadee.github.io/Saanchii's/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codewithsadee.github.io/Copper Chimney/"><strong>➥ Live Demo</strong></a>
 
 </div>
 
@@ -21,7 +21,7 @@
 
 ### Demo Screeshots
 
-![Saanchii's Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Copper Chimney Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
 ### Prerequisites
 
@@ -31,18 +31,18 @@ Before you begin, ensure you have met the following requirements:
 
 ### Run Locally
 
-To run **Saanchii's** locally, run this command on your git bash:
+To run **Copper Chimney** locally, run this command on your git bash:
 
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/Saanchii's.git
+sudo git clone https://github.com/codewithsadee/Copper Chimney.git
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/Saanchii's.git
+git clone https://github.com/codewithsadee/Copper Chimney.git
 ```
 
 ### Contact

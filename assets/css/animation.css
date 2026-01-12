@@ -1,0 +1,85 @@
+/* Custom Cursor */
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.cursor-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--gold-crayola);
+}
+
+.cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--gold-crayola);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Hover state for cursor */
+body.hovering .cursor-outline {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(226, 196, 126, 0.1);
+    /* Gold with low opacity */
+    border-color: transparent;
+    backdrop-filter: blur(2px);
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+body.hovering .cursor-dot {
+    background-color: var(--white);
+}
+
+/* Text Reveal Utilities */
+.reveal-text {
+    overflow: hidden;
+    display: inline-block;
+    /* Essential for transforms */
+    line-height: 1.2;
+}
+
+.char {
+    display: inline-block;
+    transform-origin: 50% 100%;
+}
+
+/* Image Reveal Utilities */
+.reveal-img-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.reveal-img-wrapper img {
+    opacity: 1;
+    /* Reset initial opacity for clip-path */
+}
+
+/* Lenis Smooth Scroll */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+    /* Prevent conflict with native scroll behavior */
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}
