@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>About Us - Copper Chimney</title>
+  <meta name="title" content="About Us - Copper Chimney">
+  <meta name="description" content="Learn more about the story and tradition behind Copper Chimney.">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/animation.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <style>
+    .about-page {
+      padding-block: 60px 100px;
+      background: radial-gradient(circle at top right, rgba(210, 160, 92, 0.05), transparent 40%),
+        radial-gradient(circle at bottom left, rgba(210, 160, 92, 0.05), transparent 40%);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 40px;
+      width: 100%;
+      z-index: 100;
+    }
+
+    .header-logo {
+      width: 140px;
+      transition: var(--transition-1);
+    }
+
+    .header-logo:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hero Section Enhancements */
+    .about-hero {
+      margin-block-end: 100px;
+      position: relative;
+    }
+
+    .gold-divider {
+      width: 60px;
+      height: 2px;
+      background-color: var(--gold-crayola);
+      margin-inline: auto;
+      margin-block: 25px;
+      box-shadow: 0 0 10px var(--gold-crayola);
+    }
+
+    /* Modern Split Story Layout */
+    .story-container {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 80px;
+      text-align: left;
+      margin-block-end: 140px;
+    }
+
+    .story-content .section-subtitle {
+      text-align: left;
+      margin-inline: 0;
+      color: var(--gold-crayola);
+      letter-spacing: 3px;
+    }
+
+    .story-text {
+      color: var(--quick-silver);
+      line-height: 1.9;
+      margin-block: 25px;
+      font-size: 1.1rem;
+    }
+
+    .story-banner {
+      position: relative;
+      border-radius: var(--radius-24);
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid var(--white-alpha-10);
+    }
+
+    /* Pillar / Values Section */
+    .pillars-section {
+      padding-block-start: 120px;
+      border-block-start: 1px solid var(--white-alpha-10);
+      position: relative;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-block-start: 80px;
+    }
+
+    .pillar-card {
+      background: linear-gradient(135deg, var(--eerie-black-1), var(--smoky-black-3));
+      border: 1px solid var(--white-alpha-10);
+      padding: 50px 35px;
+      border-radius: var(--radius-24);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-15px);
+      border-color: var(--gold-crayola);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .pillar-icon {
+      font-size: 50px;
+      color: var(--gold-crayola);
+      margin-block-end: 25px;
+      filter: drop-shadow(0 0 8px rgba(210, 160, 92, 0.3));
+    }
+
+    .pillar-title {
+      margin-block-end: 20px;
+      font-family: var(--fontFamily-forum);
+      letter-spacing: 1px;
+    }
+
+    .pillar-card p {
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1200px) {
+      .story-container {
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .story-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+      }
+
+      .story-content .section-subtitle {
+        text-align: center;
+        margin-inline: auto;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-inline: auto;
+      }
+
+      .top-bar {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-page {
+        padding-block: 40px 80px;
+      }
+
+      .header-logo {
+        width: 100px;
+      }
+
+      .top-bar .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <header class="top-bar">
+    <a href="index.html" class="logo">
+      <img src="./assets/images/copper chimney logo - yellow.png" alt="Copper Chimney" class="header-logo">
+    </a>
+
+    <a href="index.html" class="btn btn-secondary">
+      <span class="text text-1">Back to Home</span>
+      <span class="text text-2" aria-hidden="true">Back to Home</span>
+    </a>
+  </header>
+
+  <main>
+    <article>
+
+      <section class="section about-page" aria-labelledby="about-label">
+        <div class="container">
+
+          <!-- HERO AREA -->
+          <div class="about-hero text-center">
+            <p class="label-2 section-subtitle reveal" id="about-label">Tradition & Taste</p>
+            <h1 class="display-1 section-title reveal">Discover Our Legacy</h1>
+            <div class="gold-divider"></div>
+            <p class="headline-2 section-subtitle reveal" style="max-width: 800px; margin-inline: auto;">
+              For over four decades, we've been the heartbeat of authentic Indian cuisine, where every recipe tells a
+              story of heritage and passion.
+            </p>
+          </div>
+
+          <!-- STORY SPLIT -->
+          <div class="story-container">
+            <div class="story-content reveal">
+              <p class="label-2 section-subtitle">Our Journey</p>
+              <h2 class="headline-2 text-white">From Frontier to Modern Table</h2>
+              <div class="story-text">
+                <p style="margin-block-end: 25px;">
+                  Founded in 1972, Copper Chimney was born out of a passion for the legendary frontier cuisine. Our
+                  journey began with the simple idea of bringing the robust flavors of North India to the global stage,
+                  using copper tandoors and hand-picked spices.
+                </p>
+                <p>
+                  Today, we stand as a beacon of authentic Indian heritage, where every slow-cooked curry and
+                  smoke-infused kebab is a tribute to the master chefs who came before us. We blend rustic traditions
+                  with modern elegance to create an experience that is truly timeless.
+                </p>
+              </div>
+              <a href="menu.html" class="btn btn-primary" style="margin-top: 20px;">
+                <span class="text text-1">Explore Our Menu</span>
+                <span class="text text-2" aria-hidden="true">Explore Our Menu</span>
+              </a>
+            </div>
+
+            <div class="story-banner reveal">
+              <img src="./assets/images/about-banner-new.png" width="570" height="570" loading="lazy"
+                alt="About our kitchen" class="w-100" style="object-fit: cover; transition: transform 0.8s ease;">
+            </div>
+          </div>
+
+          <!-- PILLARS SECTION -->
+          <div class="pillars-section">
+            <div class="text-center" style="margin-block-end: 60px;">
+              <p class="label-2 section-subtitle reveal">What Defines Us</p>
+              <h2 class="headline-1 reveal">The Pillars of Copper Chimney</h2>
+            </div>
+
+            <div class="pillars-grid">
+              <div class="pillar-card reveal">
+                <ion-icon name="restaurant-outline" class="pillar-icon"></ion-icon>
+                <h3 class="title-2 pillar-title">Heritage Spices</h3>
+                <p class="label-1 text-quick-silver">We meticulously roast and hand-grind our own spice blends every
+                  morning, ensuring a depth of flavor that is uniquely ours.</p>
+              </div>
+
+              <div class="pillar-card reveal" style="transition-delay: 150ms;">
+                <ion-icon name="flame-outline" class="pillar-icon"></ion-icon>
+                <h3 class="title-2 pillar-title">Master Chefs</h3>
+                <p class="label-1 text-quick-silver">Our Ustad chefs are artisans of the tandoor, mastering the delicate
+                  balance of heat and smoke inside our traditional clay ovens.</p>
+              </div>
+
+              <div class="pillar-card reveal" style="transition-delay: 300ms;">
+                <ion-icon name="ribbon-outline" class="pillar-icon"></ion-icon>
+                <h3 class="title-2 pillar-title">Royal Legacy</h3>
+                <p class="label-1 text-quick-silver">Winner of numerous culinary awards, we have been recognized
+                  globally for our consistency and commitment to authentic recipes.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="footer section has-bg-image text-center"
+    style="background-image: url('./assets/images/footer-bg-new.png')">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2026 Copper Chimney. All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+  <script>
+    // Entrances Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.reveal').forEach((el, i) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 50,
+        duration: 1.2,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+
+    // Parallax for Banner
+    gsap.to(".story-banner img", {
+      yPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".story-banner",
+        scrub: true
+      }
+    });
+  </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

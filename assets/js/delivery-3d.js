@@ -5,6 +5,13 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 export function initDelivery3D() {
     console.log('initDelivery3D: Starting...');
+
+    // Skip 3D initialization on mobile devices for performance
+    if (window.innerWidth < 768) {
+        console.log('initDelivery3D: Mobile detected, skipping 3D model loading.');
+        return;
+    }
+
     const canvas = document.querySelector('#delivery-canvas');
     if (!canvas) {
         console.error('initDelivery3D: Canvas #delivery-canvas not found');
@@ -81,8 +88,8 @@ export function initDelivery3D() {
         console.log('initDelivery3D: Model loaded successfully');
         model = gltf.scene;
 
-        model.scale.set(2.5, 2.5, 2.5);
-        model.position.set(0, -1.5, 0);
+        model.scale.set(4.5, 4.5, 4.5);
+        model.position.set(0, -2.5, 0);
 
         // Enable shadows
         model.traverse((node) => {

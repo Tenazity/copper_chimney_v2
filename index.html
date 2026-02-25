@@ -11,7 +11,7 @@
   -->
   <title>Copper Chimney - Amazing & Delicious Food</title>
   <meta name="title" content="Copper Chimney - Amazing & Delicious Food">
-  <meta name="description" content="This is a Restaurant html template made by codewithsadee">
+  <meta name="description" content="This is a Restaurant html template">
 
   <!-- 
     - favicon
@@ -23,6 +23,9 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
@@ -32,13 +35,6 @@
   -->
   <link rel="stylesheet" href="./assets/css/animation.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- 
-    - preload images
-  -->
-  <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
-  <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
 
   <script type="importmap">
     {
@@ -55,55 +51,6 @@
   <!-- 
     - #TOP BAR
   -->
-
-  <div class="topbar">
-    <div class="container">
-
-      <address class="topbar-item">
-        <div class="icon">
-          <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span">
-          Restaurant St, Delicious City, London 9578, UK
-        </span>
-      </address>
-
-      <div class="separator"></div>
-
-      <div class="topbar-item item-2">
-        <div class="icon">
-          <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span">Daily : 8.00 am to 10.00 pm</span>
-      </div>
-
-      <a href="tel:+11234567890" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span">+1 123 456 7890</span>
-      </a>
-
-      <div class="separator"></div>
-
-      <a href="mailto:booking@restaurant.com" class="topbar-item link">
-        <div class="icon">
-          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-        </div>
-
-        <span class="span">booking@restaurant.com</span>
-      </a>
-
-    </div>
-  </div>
-
-
-
-
-
   <!-- 
     - #HEADER
   -->
@@ -112,7 +59,7 @@
     <div class="container">
       <!-- Logo goes here -->
       <a href="#" class="logo">
-        <img src="" width="160" height="50" alt="Copper Chimney - Home">
+        <img src="./assets/images/copper chimney logo - yellow.png" width="100" height="50" alt="Copper Chimney - Home">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -128,18 +75,10 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#home" class="navbar-link hover-underline active">
+            <a href="#home" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Home</span>
-            </a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">Menus</span>
             </a>
           </li>
 
@@ -150,17 +89,24 @@
               <span class="span">About Us</span>
             </a>
           </li>
-
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#menu" class="navbar-link hover-underline">
               <div class="separator"></div>
 
-              <span class="span">Our Chefs</span>
+              <span class="span">Menus</span>
             </a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link hover-underline">
+            <a href="#delivery" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Delivery</span>
+            </a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Contact</span>
@@ -235,7 +181,7 @@
             <p class="body-2 hero-text slider-reveal">
               Experience culinary excellence where every dish tells a story.
             </p>
-            <a href="#menu" class="btn btn-primary slider-reveal">
+            <a href="menu.html" class="btn btn-primary slider-reveal">
               <span class="text text-1">Discover Menu</span>
               <span class="text text-2" aria-hidden="true">Discover Menu</span>
             </a>
@@ -259,8 +205,8 @@
           <h2 class="headline-1 section-title">We Offer Top Notch</h2>
 
           <p class="section-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys
-            standard dummy text ever.
+            From comforting breakfasts to elegant dinners, Copper Chimney brings together classic recipes,
+            bold flavors, and seasonal ingredients to create memorable dining experiences all day long.
           </p>
 
           <ul class="grid-list">
@@ -270,7 +216,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+                    <img src="./assets/images/service-1-new.png" width="285" height="336" loading="lazy" alt="Breakfast"
                       class="img-cover">
                   </figure>
                 </a>
@@ -281,7 +227,7 @@
                     <a href="#">Breakfast</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="menu.html" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -293,8 +239,8 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
-                      class="img-cover">
+                    <img src="./assets/images/service-2-new.png" width="285" height="336" loading="lazy"
+                      alt="Appetizers" class="img-cover">
                   </figure>
                 </a>
 
@@ -304,7 +250,7 @@
                     <a href="#">Appetizers</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="menu.html" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -316,7 +262,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
+                    <img src="./assets/images/service-3-new.png" width="285" height="336" loading="lazy" alt="Drinks"
                       class="img-cover">
                   </figure>
                 </a>
@@ -327,7 +273,7 @@
                     <a href="#">Drinks</a>
                   </h3>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <a href="menu.html" class="btn-text hover-underline label-2">View Menu</a>
 
                 </div>
 
@@ -359,19 +305,19 @@
 
             <p class="label-2 section-subtitle" id="about-label">Our Story</p>
 
-            <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2>
+            <h2 class="headline-1 section-title">Every Flavor Tells a Story</h2>
 
             <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book It has survived not only five centuries, but also the leap into.
+              At Copper Chimney, we celebrate the rich traditions of Indian cuisine with a modern twist.
+              From slow-smoked kebabs to fragrant biryanis and indulgent desserts, every plate is crafted
+              with hand-ground spices, fresh local produce, and recipes passed down through generations.
             </p>
 
             <div class="contact-label">Book Through Call</div>
 
             <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
 
-            <a href="#" class="btn btn-primary">
+            <a href="about.html" class="btn btn-primary">
               <span class="text text-1">Read More</span>
 
               <span class="text text-2" aria-hidden="true">Read More</span>
@@ -381,12 +327,11 @@
 
           <figure class="about-banner">
 
-            <img src="./assets/images/about-banner.jpg" width="570" height="570" loading="lazy" alt="about banner"
+            <img src="./assets/images/about-banner-new.png" width="570" height="570" loading="lazy" alt="about banner"
               class="w-100" data-parallax-item data-parallax-speed="1">
 
             <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
-              <img src="./assets/images/about-abs-image.jpg" width="285" height="285" loading="lazy" alt=""
-                class="w-100">
+              <img src="./assets/images/about-abs-new.png" width="285" height="285" loading="lazy" alt="" class="w-100">
             </div>
 
             <div class="abs-img abs-img-2 has-before">
@@ -403,7 +348,9 @@
 
 
 
-
+      <!-- 
+        - #CHEFS
+      -->
       <!-- 
         - #SPECIAL DISH
       -->
@@ -411,8 +358,8 @@
       <section class="special-dish text-center" aria-labelledby="dish-label">
 
         <div class="special-dish-banner">
-          <img src="./assets/images/special-dish-banner.jpg" width="940" height="900" loading="lazy" alt="special dish"
-            class="img-cover">
+          <img src="./assets/images/special-dish-banner-new.png" width="940" height="900" loading="lazy"
+            alt="special dish" class="img-cover" data-parallax-item data-parallax-speed="0.2">
         </div>
 
         <div class="special-dish-content bg-black-10">
@@ -420,13 +367,13 @@
 
             <img src="./assets/images/badge-1.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
 
-            <p class="section-subtitle label-2">Special Dish</p>
+            <p class="section-subtitle label-2">Chef's Signature</p>
 
-            <h2 class="headline-1 section-title">Lobster Tortellini</h2>
+            <h2 class="headline-1 section-title" id="dish-label">Smoked Butter Chicken Pot</h2>
 
             <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type.
+              Our most-loved dish: tender tandoor-grilled chicken simmered in a silky tomato and cashew
+              gravy, finished with smoked butter and fenugreek. Served bubbling hot in a copper handi.
             </p>
 
             <div class="wrapper">
@@ -435,7 +382,7 @@
               <span class="span body-1">$20.00</span>
             </div>
 
-            <a href="#" class="btn btn-primary">
+            <a href="menu.html" class="btn btn-primary">
               <span class="text text-1">View All Menu</span>
 
               <span class="text text-2" aria-hidden="true">View All Menu</span>
@@ -479,7 +426,7 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Greek Salad</a>
+                      <a href="#" class="card-title">Tandoori Paneer Skewers</a>
                     </h3>
 
                     <span class="badge label-1">Seasonal</span>
@@ -488,7 +435,8 @@
                   </div>
 
                   <p class="card-text label-1">
-                    Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
+                    Cottage cheese marinated overnight in yogurt, chilli, and house-ground spices,
+                    grilled over charcoal and finished with lemon.
                   </p>
 
                 </div>
@@ -508,14 +456,15 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Lasagne</a>
+                      <a href="#" class="card-title">Copper Chimney Butter Chicken</a>
                     </h3>
 
                     <span class="span title-2">$40.00</span>
                   </div>
 
                   <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                    Classic North-Indian style butter chicken with a rich tomato base, cream,
+                    and smoked butter, served with butter naan.
                   </p>
 
                 </div>
@@ -535,14 +484,15 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Butternut Pumpkin</a>
+                      <a href="#" class="card-title">Charcoal Lamb Chops</a>
                     </h3>
 
                     <span class="span title-2">$10.00</span>
                   </div>
 
                   <p class="card-text label-1">
-                    Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.
+                    Australian lamb chops marinated in mustard, garlic, and spices, seared in
+                    the tandoor for a smoky, tender finish.
                   </p>
 
                 </div>
@@ -562,7 +512,7 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Tokusen Wagyu</a>
+                      <a href="#" class="card-title">Paneer Tikka Masala</a>
                     </h3>
 
                     <span class="badge label-1">New</span>
@@ -571,7 +521,8 @@
                   </div>
 
                   <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.
+                    Char-grilled paneer cubes tossed in a spiced onion–tomato gravy, finished
+                    with cream and fresh coriander.
                   </p>
 
                 </div>
@@ -591,14 +542,15 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Olivas Rellenas</a>
+                      <a href="#" class="card-title">Smoked Dal Makhani</a>
                     </h3>
 
                     <span class="span title-2">$25.00</span>
                   </div>
 
                   <p class="card-text label-1">
-                    Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.
+                    Slow-cooked black lentils and kidney beans, enriched with cream and butter,
+                    lightly smoked for depth of flavor.
                   </p>
 
                 </div>
@@ -618,14 +570,15 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Opu Fish</a>
+                      <a href="#" class="card-title">Saffron Pistachio Kulfi</a>
                     </h3>
 
                     <span class="span title-2">$49.00</span>
                   </div>
 
                   <p class="card-text label-1">
-                    Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices
+                    Traditional Indian ice cream flavored with saffron and pistachio, served
+                    on a stick with rose syrup.
                   </p>
 
                 </div>
@@ -639,7 +592,7 @@
             During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
           </p>
 
-          <a href="#" class="btn btn-primary">
+          <a href="menu.html" class="btn btn-primary">
             <span class="text text-1">View All Menu</span>
 
             <span class="text text-2" aria-hidden="true">View All Menu</span>
@@ -664,60 +617,81 @@
       <section class="section delivery" id="delivery" aria-label="delivery">
         <div class="container">
 
-          <div class="delivery-content">
-            <p class="section-subtitle label-2">Super Fast Delivery</p>
-            <h2 class="headline-1 section-title">Your Favorite Food,<br> Delivered Hot & Fresh</h2>
+          <div class="delivery-layout">
 
-            <p class="section-text body-1">
-              Experience the speed of our premium delivery service. We ensure your food reaches you in perfect
-              condition, every single time.
-            </p>
+            <div class="delivery-panel">
+              <div class="delivery-visual" data-parallax-item data-parallax-speed="0.5">
+                <canvas id="delivery-canvas"></canvas>
+                <div class="delivery-visual-overlay" data-parallax-item data-parallax-speed="0.8">
+                  <p class="label-2">Live Tracking View</p>
+                  <p class="body-4">Watch your order glide through the city in real time.</p>
+                </div>
+              </div>
 
-            <ul class="delivery-features">
-              <li>
-                <div class="feature-item">
-                  <div class="icon">
-                    <ion-icon name="bicycle-outline" aria-hidden="true"></ion-icon>
-                  </div>
-                  <div class="text">
-                    <h3 class="title-4">30 Minutes Delivery</h3>
-                    <p class="body-3">Guaranteed on-time delivery or it's free.</p>
+              <div class="delivery-stats">
+                <div class="delivery-chip">
+                  <span class="label-2">Average Time</span>
+                  <p class="title-3">32 min</p>
+                </div>
+                <div class="delivery-chip">
+                  <span class="label-2">Neighbourhoods</span>
+                  <p class="title-3">25+</p>
+                </div>
+                <div class="delivery-chip">
+                  <span class="label-2">Guest Rating</span>
+                  <p class="title-3">4.8★</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="delivery-copy">
+              <p class="delivery-kicker label-2">Copper Chimney at Your Door</p>
+              <h2 class="headline-1 delivery-title">Fine Dining, Delivered Beautifully</h2>
+
+              <p class="body-2 delivery-text">
+                From last‑minute plans to long‑awaited celebrations, our delivery is designed to feel
+                like a restaurant service at home – careful plating, secure packing, and timing down to the minute.
+              </p>
+
+              <div class="delivery-steps">
+                <div class="delivery-step">
+                  <span class="delivery-step-number">01</span>
+                  <div class="delivery-step-body">
+                    <h3 class="title-4">Choose your favourites</h3>
+                    <p class="body-4">Browse signatures, grills and desserts from the Copper Chimney menu.</p>
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="feature-item">
-                  <div class="icon">
-                    <ion-icon name="thermometer-outline" aria-hidden="true"></ion-icon>
-                  </div>
-                  <div class="text">
-                    <h3 class="title-4">Hot & Fresh</h3>
-                    <p class="body-3">Thermal bags keep your meal at the perfect temperature.</p>
+                <div class="delivery-step">
+                  <span class="delivery-step-number">02</span>
+                  <div class="delivery-step-body">
+                    <h3 class="title-4">Set the perfect time</h3>
+                    <p class="body-4">Opt for ASAP delivery or schedule it to arrive with your guests.</p>
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="feature-item">
-                  <div class="icon">
-                    <ion-icon name="map-outline" aria-hidden="true"></ion-icon>
-                  </div>
-                  <div class="text">
-                    <h3 class="title-4">Live Tracking</h3>
-                    <p class="body-3">Track your delivery partner in real-time.</p>
+                <div class="delivery-step">
+                  <span class="delivery-step-number">03</span>
+                  <div class="delivery-step-body">
+                    <h3 class="title-4">Unbox & serve</h3>
+                    <p class="body-4">Open heat‑safe containers, plate, and enjoy – no extra prep needed.</p>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </div>
 
-            <a href="#" class="btn btn-primary">
-              <span class="text text-1">Order Now</span>
-              <span class="text text-2" aria-hidden="true">Order Now</span>
-            </a>
+              <div class="delivery-actions">
+                <a href="#menu" class="btn btn-primary">
+                  <span class="text text-1">Order For Delivery</span>
+                  <span class="text text-2" aria-hidden="true">Order For Delivery</span>
+                </a>
+                <button class="delivery-ghost-btn label-2" type="button">
+                  View Delivery Zones
+                </button>
+              </div>
+            </div>
+
           </div>
 
-          <div class="delivery-banner">
-            <canvas id="delivery-canvas"></canvas>
-          </div>
+          <img src="./assets/images/shape-8.png" width="120" height="115" loading="lazy" alt="shape"
+            class="shape shape-1 move-anim">
 
         </div>
       </section>
@@ -731,7 +705,7 @@
       -->
 
       <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/testimonial-bg.jpg')" aria-label="testimonials">
+        style="background-image: url('./assets/images/testimonial-bg-dark.png')" aria-label="testimonials">
         <div class="container">
 
           <div class="quote">”</div>
@@ -765,14 +739,14 @@
         - #RESERVATION
       -->
 
-      <section class="reservation">
+      <section class="section reservation" id="contact">
         <div class="container">
 
           <div class="form reservation-form bg-black-10">
 
             <form action="" class="form-left">
 
-              <h2 class="headline-1 text-center">Online Reservation</h2>
+              <h2 class="headline-1 text-center reveal">Online Reservation</h2>
 
               <p class="form-text text-center">
                 Booking request <a href="tel:+88123123456" class="link">+88-123-123456</a>
@@ -849,7 +823,7 @@
 
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
 
-              <h2 class="headline-1 text-center">Contact Us</h2>
+              <h2 class="headline-1 text-center reveal">Contact Us</h2>
 
               <p class="contact-label">Booking Request</p>
 
@@ -993,7 +967,7 @@
                   <img src="./assets/images/event-1.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-15">15/09/2022</time>
+                  <time class="publish-date label-2" datetime="2026-09-15">15/09/2026</time>
                 </div>
 
                 <div class="card-content">
@@ -1014,7 +988,7 @@
                   <img src="./assets/images/event-2.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-08">08/09/2022</time>
+                  <time class="publish-date label-2" datetime="2026-09-08">08/09/2026</time>
                 </div>
 
                 <div class="card-content">
@@ -1035,7 +1009,7 @@
                   <img src="./assets/images/event-3.jpg" width="350" height="450" loading="lazy"
                     alt="Flavour so good you’ll try to eat with your eyes." class="img-cover">
 
-                  <time class="publish-date label-2" datetime="2022-09-03">03/09/2022</time>
+                  <time class="publish-date label-2" datetime="2026-09-03">03/09/2026</time>
                 </div>
 
                 <div class="card-content">
@@ -1072,10 +1046,10 @@
   -->
 
   <footer class="footer section has-bg-image text-center"
-    style="background-image: url('./assets/images/footer-bg.jpg')">
+    style="background-image: url('./assets/images/footer-bg-new.png')">
     <div class="container">
 
-      <div class="footer-top grid-list">
+      <div class="footer-top grid-list reveal">
 
         <div class="footer-brand has-before has-after">
 
@@ -1176,8 +1150,8 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2022 Copper Chimney. All Rights Reserved | Crafted by <a href="https://github.com/codewithsadee"
-            target="_blank" class="link">codewithsadee</a>
+          &copy; 2026 Copper Chimney. All Rights Reserved
+        </p>
         </p>
 
       </div>

@@ -1,9 +1,17 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
 class Hero3DScene {
     constructor() {
         console.log('Hero3DScene: Initializing...');
+
+        // Skip 3D initialization on mobile devices for performance
+        if (window.innerWidth < 768) {
+            console.log('Hero3DScene: Mobile detected, skipping 3D model loading.');
+            return;
+        }
+
         this.container = document.getElementById('hero-3d-container');
         this.canvas = document.getElementById('hero-canvas');
 
@@ -56,7 +64,12 @@ class Hero3DScene {
     }
 
     loadModel() {
+        // Setup Draco Loader
+        const dracoLoader = new DRACOLoader();
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+
         const loader = new GLTFLoader();
+        loader.setDRACOLoader(dracoLoader);
 
         loader.load(
             './assets/models/Chef_model_2.glb',
@@ -73,7 +86,7 @@ class Hero3DScene {
 
                 // Scale
                 const maxDim = Math.max(size.x, size.y, size.z);
-                const targetSize = window.innerWidth < 768 ? 4.0 : 5.0;
+                const targetSize = window.innerWidth < 768 ? 4.2 : 5.0;
                 const scale = targetSize / (maxDim || 1);
                 this.model.scale.setScalar(scale);
 
