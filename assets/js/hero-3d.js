@@ -117,7 +117,6 @@ class Hero3DScene {
 
     addEventListeners() {
         window.addEventListener('resize', this.onWindowResize.bind(this));
-        window.addEventListener('mousemove', this.onMouseMove.bind(this));
     }
 
     onWindowResize() {
@@ -134,18 +133,7 @@ class Hero3DScene {
         }
     }
 
-    onMouseMove(event) {
-        if (!this.model) return;
 
-        const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
-        const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
-
-        const targetX = mouseY * 0.05;
-        const targetY = this.baseRotationY + mouseX * 0.1;
-
-        this.model.rotation.x += (targetX - this.model.rotation.x) * 0.05;
-        this.model.rotation.y += (targetY - this.model.rotation.y) * 0.05;
-    }
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));
