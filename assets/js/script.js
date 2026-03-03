@@ -148,28 +148,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   }
 
-  // Animate Reservation & Contact
-  const reservationForm = document.querySelector(".reservation .form-left");
-  const reservationRight = document.querySelector(".reservation .form-right");
-  if (reservationForm && reservationRight) {
-    gsap.from(reservationForm, {
+  // Animate Contact Section Items (Staggered)
+  const contactItems = document.querySelectorAll(".contact-info-item");
+  if (contactItems.length) {
+    gsap.from(contactItems, {
       scrollTrigger: {
-        trigger: ".reservation",
-        start: "top 70%"
+        trigger: "#contact",
+        start: "top 75%",
       },
-      x: -100,
+      x: -50,
       opacity: 0,
-      duration: 1.2,
-      ease: "power3.out"
-    });
-    gsap.from(reservationRight, {
-      scrollTrigger: {
-        trigger: ".reservation",
-        start: "top 70%"
-      },
-      x: 100,
-      opacity: 0,
-      duration: 1.2,
+      duration: 1,
+      stagger: 0.2,
       ease: "power3.out"
     });
   }

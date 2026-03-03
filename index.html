@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- 
-    - primary meta tags
+    - primary meta tags 
   -->
   <title>Copper Chimney - Amazing & Delicious Food</title>
   <meta name="title" content="Copper Chimney - Amazing & Delicious Food">
@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/copper chimney logo - yellow.png" type="image/svg+xml">
 
   <!-- 
     - google font link
@@ -35,7 +35,7 @@
   -->
   <link rel="stylesheet" href="./assets/css/animation.css">
   <link rel="stylesheet" href="./assets/css/style.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="importmap">
     {
       "imports": {
@@ -120,20 +120,19 @@
           <p class="headline-1 navbar-title">Visit Us</p>
 
           <address class="body-4">
-            Restaurant St, Delicious City, <br>
-            London 9578, UK
+            81 Commerce Street , Kaitaia-0410
           </address>
 
           <p class="body-4 navbar-text">Daily : 8.00 am to 10.00 pm</p>
 
-          <a href="mailto:booking@restaurant.com" class="body-4 sidebar-link">booking@restaurant.com</a>
+          <a href="mailto:manichef.nz@gmail.com" class="body-4 sidebar-link">manichef.nz@gmail.com</a>
 
           <div class="separator"></div>
 
           <p class="contact-label">Booking Request</p>
 
-          <a href="tel:+11234567890" class="body-1 contact-number hover-underline">
-            +1 123 456 7890
+          <a href="tel:+64223991610" class="body-1 contact-number hover-underline">
+            +64 22 399 1610
           </a>
         </div>
 
@@ -311,7 +310,7 @@
 
             <div class="contact-label">Book Through Call</div>
 
-            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
+            <a href="tel:+64223991610" class="body-1 contact-number hover-underline">+64 22 399 1610</a>
 
             <a href="about.html" class="btn btn-primary">
               <span class="text text-1">Read More</span>
@@ -678,9 +677,9 @@
                   <span class="text text-1">Order For Delivery</span>
                   <span class="text text-2" aria-hidden="true">Order For Delivery</span>
                 </a>
-                <button class="delivery-ghost-btn label-2" type="button">
+                <!-- <button class="delivery-ghost-btn label-2" type="button">
                   View Delivery Zones
-                </button>
+                </button> -->
               </div>
             </div>
 
@@ -735,47 +734,80 @@
         - #RESERVATION
       -->
 
-      <section class="section reservation" id="contact">
-        <div class="container">
+      <section class="section contact" id="contact" aria-label="contact">
+        <div class="container" id="contact-video">
+          <div class="contact-card glass-card reveal">
 
-          <div class="form reservation-form bg-black-10" style="display: block;">
+            <div class="contact-content-wrapper" style="padding: 60px 40px;">
 
-            <div class="form-right text-center"
-              style="background-image: url('./assets/images/form-pattern.png'); width: 100%; padding: 60px 40px;">
+              <h2 class="headline-1 text-center reveal" style="margin-block-end: 40px;">Contact Us</h2>
 
-              <h2 class="headline-1 text-center reveal">Contact Us</h2>
+              <div class="contact-info-item reveal">
+                <div class="contact-info-icon">
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
+                <div class="contact-content">
+                  <p class="contact-label label-2">Booking Request</p>
+                  <a href="tel:+64223991610" class="body-1 contact-number hover-underline">+64 22 399 1610</a>
+                </div>
+              </div>
 
-              <p class="contact-label">Booking Request</p>
+              <div class="contact-info-item reveal">
+                <div class="contact-info-icon">
+                  <ion-icon name="location-outline"></ion-icon>
+                </div>
+                <div class="contact-content">
+                  <p class="contact-label label-2">Location</p>
+                  <address class="body-4">
+                    81 Commerce Street , Kaitaia-0410
+                  </address>
+                </div>
+              </div>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">+88-123-123456</a>
+              <div class="contact-info-item reveal">
+                <div class="contact-info-icon">
+                  <ion-icon name="time-outline"></ion-icon>
+                </div>
+                <div class="contact-content">
+                  <p class="contact-label label-2">Lunch Time</p>
+                  <p class="body-4">
+                    Monday to Sunday : 11.00 am - 2.30pm
+                  </p>
+                </div>
+              </div>
 
-              <div class="separator"></div>
-
-              <p class="contact-label">Location</p>
-
-              <address class="body-4">
-                Restaurant St, Delicious City, <br>
-                London 9578, UK
-              </address>
-
-              <p class="contact-label">Lunch Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                11.00 am - 2.30pm
-              </p>
-
-              <p class="contact-label">Dinner Time</p>
-
-              <p class="body-4">
-                Monday to Sunday <br>
-                05.00 pm - 10.00pm
-              </p>
+              <div class="contact-info-item reveal">
+                <div class="contact-info-icon">
+                  <ion-icon name="restaurant-outline"></ion-icon>
+                </div>
+                <div class="contact-content">
+                  <p class="contact-label label-2">Dinner Time</p>
+                  <p class="body-4">
+                    Monday to Sunday : 05.00 pm - 10.00pm
+                  </p>
+                </div>
+              </div>
+              <!-- Fav Icons -->
+              <div class="contact-info-item reveal">
+                <div class="contact-info-icon">
+                  <i class="fa fa-whatsapp"></i>
+                </div>
+                <div class="contact-content">
+                  <p class="contact-label label-2">Start a Conversation</p>
+                  <a href="https://wa.me/64223991610" class="body-4 contact-number hover-underline" target="_blank">
+                    Chat with us on WhatsApp
+                  </a>
+                </div>
+              </div>
 
             </div>
 
           </div>
 
+          <div class="video-container reveal">
+            <video src="./assets/Videos/contactSection.mp4" width="100%" height="auto" autoplay muted loop
+              class="img-cover"></video>
+          </div>
         </div>
       </section>
 
@@ -979,12 +1011,12 @@
           </a>
 
           <address class="body-4">
-            Restaurant St, Delicious City, London 9578, UK
+            81 Commerce Street , Kaitaia-0410
           </address>
 
-          <a href="mailto:booking@Copper Chimney.com" class="body-4 contact-link">booking@Copper Chimney.com</a>
+          <a href="mailto:manichef.nz@gmail.com" class="body-4 contact-link">manichef.nz@gmail.com</a>
 
-          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
+          <a href="tel:+64223991610" class="body-4 contact-link">Booking Request : +64 22 399 1610</a>
 
           <p class="body-4">
             Open : 09:00 am - 01:00 pm

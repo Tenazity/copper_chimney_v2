@@ -227,14 +227,6 @@ function generateMenuHTML() {
                         <div class="menu-item-price">$${item.price}</div>
                     </div>
                     ${descHtml}
-                    <div class="menu-item-controls">
-                        <button class="menu-item-add-btn add-to-order-btn">+ Add</button>
-                        <div class="qty-controls" style="display: none;">
-                            <button class="qty-btn qty-dec">−</button>
-                            <span class="qty-number" style="font-size: 1.1rem; margin: 0 10px; color: var(--white);">1</span>
-                            <button class="qty-btn qty-inc">+</button>
-                        </div>
-                    </div>
                 </div>
             `;
         });
