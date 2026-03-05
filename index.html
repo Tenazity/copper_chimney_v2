@@ -165,23 +165,68 @@
         - #HERO 3D
       -->
 
-      <section class="hero-3d" id="home" aria-label="home">
-        <div id="hero-3d-container">
-          <canvas id="hero-canvas"></canvas>
-          <div class="hero-3d-content">
-            <p class="label-2 section-subtitle slider-reveal">Traditional & Hygiene</p>
-            <h1 class="display-1 hero-title slider-reveal">
-              The Art of Fine Dining
-            </h1>
-            <p class="body-2 hero-text slider-reveal">
-              Experience culinary excellence where every dish tells a story.
-            </p>
-            <a href="menu.html" class="btn btn-primary slider-reveal">
-              <span class="text text-1">Discover Menu</span>
-              <span class="text text-2" aria-hidden="true">Discover Menu</span>
-            </a>
-          </div>
+      <section class="hero-slider" id="home" aria-label="hero slider" data-slider>
+        <div class="slider-item active" data-slider-item>
+          <div class="slider-bg img-holder" style="background-image: url('./assets/images/shape-9.png');"></div>
+
+          <p class="label-2 section-subtitle slider-reveal">DELIGHTFUL EXPERIENCE</p>
+
+          <h1 class="display-1 hero-title slider-reveal">
+            Flavors Inspired by <br>
+            the Seasons
+          </h1>
+
+          <p class="body-2 hero-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
+
+          <a href="#menu" class="btn btn-primary slider-reveal"> 
+            <span class="text text-1">View Our Menu</span>
+            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+          </a>
         </div>
+
+        <div class="slider-item" data-slider-item>
+          <div class="slider-bg img-holder" style="background-image: url('./assets/images/chinese.png');"></div>
+
+          <p class="label-2 section-subtitle slider-reveal">Traditional & Hygiene</p>
+
+          <h1 class="display-1 hero-title slider-reveal">
+            For the love of <br>
+            delicious food
+          </h1>
+
+          <p class="body-2 hero-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
+
+          <a href="#menu" class="btn btn-primary slider-reveal"> 
+            <span class="text text-1">View Our Menu</span>
+            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+          </a>
+        </div>
+
+        <div class="slider-item" data-slider-item>
+          <div class="slider-bg img-holder" style="background-image: url('./assets/images/biryani.png');"></div>
+
+          <p class="label-2 section-subtitle slider-reveal">AUTHENTIC TASTE</p>
+
+          <h1 class="display-1 hero-title slider-reveal">
+            Where Every <br>
+            Bite Matters
+          </h1>
+
+          <p class="body-2 hero-text slider-reveal">Come with family & feel the joy of mouthwatering food</p>
+
+          <a href="#menu" class="btn btn-primary slider-reveal"> 
+            <span class="text text-1">View Our Menu</span>
+            <span class="text text-2" aria-hidden="true">View Our Menu</span>
+          </a>
+        </div>
+
+        <button class="slider-btn prev" data-slider-btn="prev" aria-label="previous slide">
+          <ion-icon name="chevron-back" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="slider-btn next" data-slider-btn="next" aria-label="next slide">
+          <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+        </button>
       </section>
 
 
@@ -673,10 +718,6 @@
               </div>
 
               <div class="delivery-actions">
-                <a href="#menu" class="btn btn-primary">
-                  <span class="text text-1">Order For Delivery</span>
-                  <span class="text text-2" aria-hidden="true">Order For Delivery</span>
-                </a>
                 <!-- <button class="delivery-ghost-btn label-2" type="button">
                   View Delivery Zones
                 </button> -->
@@ -736,13 +777,13 @@
 
       <section class="section contact" id="contact" aria-label="contact">
         <div class="container" id="contact-video">
-          <div class="contact-card glass-card reveal">
+          <div class="contact-card glass-card">
 
             <div class="contact-content-wrapper" style="padding: 60px 40px;">
 
-              <h2 class="headline-1 text-center reveal" style="margin-block-end: 40px;">Contact Us</h2>
+              <h2 class="headline-1 text-center" style="margin-block-end: 40px;">Contact Us</h2>
 
-              <div class="contact-info-item reveal">
+              <div class="contact-info-item">
                 <div class="contact-info-icon">
                   <ion-icon name="call-outline"></ion-icon>
                 </div>
@@ -752,7 +793,7 @@
                 </div>
               </div>
 
-              <div class="contact-info-item reveal">
+              <div class="contact-info-item">
                 <div class="contact-info-icon">
                   <ion-icon name="location-outline"></ion-icon>
                 </div>
@@ -764,7 +805,7 @@
                 </div>
               </div>
 
-              <div class="contact-info-item reveal">
+              <div class="contact-info-item">
                 <div class="contact-info-icon">
                   <ion-icon name="time-outline"></ion-icon>
                 </div>
@@ -776,7 +817,7 @@
                 </div>
               </div>
 
-              <div class="contact-info-item reveal">
+              <div class="contact-info-item">
                 <div class="contact-info-icon">
                   <ion-icon name="restaurant-outline"></ion-icon>
                 </div>
@@ -788,7 +829,7 @@
                 </div>
               </div>
               <!-- Fav Icons -->
-              <div class="contact-info-item reveal">
+              <div class="contact-info-item">
                 <div class="contact-info-icon">
                   <i class="fa fa-whatsapp"></i>
                 </div>
@@ -837,7 +878,7 @@
 
                 <h3 class="title-2 card-title">Hygienic Food</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Prepared with the highest standards of cleanliness and safety to ensure every meal is fresh, healthy, and safe for you and your family</p>
 
               </div>
             </li>
@@ -851,7 +892,7 @@
 
                 <h3 class="title-2 card-title">Fresh Environment</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Enjoy your dining experience in a clean, comfortable, and welcoming atmosphere designed for relaxation and joy.</p>
 
               </div>
             </li>
@@ -865,7 +906,7 @@
 
                 <h3 class="title-2 card-title">Skilled Chefs</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Our experienced chefs craft every dish with passion, expertise, and authentic flavors that delight every palate.</p>
 
               </div>
             </li>
@@ -879,7 +920,7 @@
 
                 <h3 class="title-2 card-title">Event & Party</h3>
 
-                <p class="label-1 card-text">Lorem Ipsum is simply dummy printing and typesetting.</p>
+                <p class="label-1 card-text">Celebrate your special moments with us — from birthdays to corporate gatherings, we make every event memorable.</p>
 
               </div>
             </li>
@@ -1018,10 +1059,6 @@
 
           <a href="tel:+64223991610" class="body-4 contact-link">Booking Request : +64 22 399 1610</a>
 
-          <p class="body-4">
-            Open : 09:00 am - 01:00 pm
-          </p>
-
           <div class="wrapper">
             <div class="separator"></div>
             <div class="separator"></div>
@@ -1052,49 +1089,13 @@
 
         <ul class="footer-list">
 
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Home</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Our Chefs</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
-          </li>
+         
 
         </ul>
 
         <ul class="footer-list">
 
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Facebook</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Instagram</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Twitter</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Youtube</a>
-          </li>
-
-          <li>
-            <a href="#" class="label-2 footer-link hover-underline">Google Map</a>
-          </li>
+          
 
         </ul>
 
@@ -1103,7 +1104,7 @@
       <div class="footer-bottom">
 
         <p class="copyright">
-          &copy; 2026 Copper Chimney. All Rights Reserved
+          &copy; <span id="current-year"></span> Copper Chimney. All Rights Reserved
         </p>
         </p>
 
@@ -1152,7 +1153,98 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- 
+  <!-- Hero Slider Script -->
+  <script>
+    const slider = document.querySelector("[data-slider]");
+    const sliderItems = document.querySelectorAll("[data-slider-item]");
+    const sliderBtnPrev = document.querySelector("[data-slider-btn='prev']");
+    const sliderBtnNext = document.querySelector("[data-slider-btn='next']");
+    let currentSlideIndex = 0;
+
+    /**
+     * next slide
+     */
+    const nextSlide = () => {
+      const lastSlideIndex = sliderItems.length - 1;
+      
+      if (currentSlideIndex >= lastSlideIndex) {
+        currentSlideIndex = 0;
+      } else {
+        currentSlideIndex++;
+      }
+      
+      sliderItems.forEach((item, index) => {
+        item.classList.toggle("active", index === currentSlideIndex);
+      });
+    };
+
+    /**
+     * previous slide
+     */
+    const prevSlide = () => {
+      const lastSlideIndex = sliderItems.length - 1;
+      
+      if (currentSlideIndex <= 0) {
+        currentSlideIndex = lastSlideIndex;
+      } else {
+        currentSlideIndex--;
+      }
+      
+      sliderItems.forEach((item, index) => {
+        item.classList.toggle("active", index === currentSlideIndex);
+      });
+    };
+
+    /**
+     * go to specific slide
+     */
+    const gotoSlide = (slideIndex) => {
+      currentSlideIndex = slideIndex;
+      sliderItems.forEach((item, index) => {
+        item.classList.toggle("active", index === currentSlideIndex);
+      });
+    };
+
+    /**
+     * auto slide
+     */
+    let slideInterval = setInterval(nextSlide, 7000);
+
+    /**
+     * event listeners
+     */
+    sliderBtnNext.addEventListener("click", () => {
+      clearInterval(slideInterval);
+      nextSlide();
+      slideInterval = setInterval(nextSlide, 7000);
+    });
+
+    sliderBtnPrev.addEventListener("click", () => {
+      clearInterval(slideInterval);
+      prevSlide();
+      slideInterval = setInterval(nextSlide, 7000);
+    });
+
+    // Initialize first slide
+    sliderItems[0].classList.add("active");
+  </script>
+
+  <!-- Dynamic Copyright Year Script -->
+  <script>
+    // Set current year dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+      const currentYearElement = document.getElementById('current-year');
+      if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
+
+<!-- 
     - #BOOKING MODAL
   -->
 
