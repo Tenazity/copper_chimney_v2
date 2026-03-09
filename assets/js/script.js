@@ -417,17 +417,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const header = document.querySelector(".header");
+
 let lastScrollY = window.scrollY;
+let scrollTimer;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > lastScrollY) {
-    // Scrolling down - hide it
+
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScrollY) {
+    // scrolling down
     header.style.transform = "translateY(-100%)";
-  } else {
-    // Scrolling up - show it
+  } else if (currentScroll < lastScrollY) {
+    // scrolling up
     header.style.transform = "translateY(0)";
   }
-  lastScrollY = window.scrollY;
+
+  lastScrollY = currentScroll;
+
+  // detect stop scrolling
+  clearTimeout(scrollTimer);
+  scrollTimer = setTimeout(() => {
+    if (window.scrollY > 100) {
+      header.style.transform = "translateY(-100%)";
+    }
+  }, 200); // delay after scroll stops
+
 });
 
 
