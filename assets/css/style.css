@@ -4412,6 +4412,205 @@ textarea.input-field {
   }
 }
 
+/* Beautified Testimonials Styles */
+.testimonials-beautified {
+  padding-block: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-beautified .section-title .span {
+  color: var(--gold-crayola);
+}
+
+.testimonial-wrapper {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  padding: 60px 40px;
+}
+
+.quote-icon {
+  font-size: 120px;
+  line-height: 1;
+  color: var(--gold-crayola);
+  opacity: 0.3;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--fontFamily-forum);
+}
+
+.testimonial-text {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  line-height: 1.6;
+  font-family: var(--fontFamily-dm_sans);
+  color: var(--white);
+  margin-block: 40px 30px;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.testimonial-rating {
+  font-size: 1.5rem;
+  color: var(--gold-crayola);
+  letter-spacing: 3px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--gold-crayola);
+}
+
+.author-info {
+  text-align: left;
+}
+
+.author-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: var(--fontFamily-forum);
+  color: var(--white);
+  margin-bottom: 5px;
+  letter-spacing: var(--letterSpacing-2);
+}
+
+.author-title {
+  font-size: 1rem;
+  color: var(--white);
+  opacity: 0.8;
+  font-family: var(--fontFamily-dm_sans);
+}
+
+.testimonial-nav-avatars {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.nav-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: var(--transition-1);
+  opacity: 0.6;
+}
+
+.nav-avatar.active {
+  opacity: 1;
+  border-color: var(--gold-crayola);
+  transform: scale(1.1);
+}
+
+.nav-avatar:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .testimonials-beautified {
+    padding-block: 80px;
+  }
+  
+  .testimonial-wrapper {
+    padding: 40px 20px;
+  }
+  
+  .quote-icon {
+    font-size: 80px;
+    top: -10px;
+  }
+  
+  .testimonial-text {
+    font-size: 1.25rem;
+    margin-block: 30px 20px;
+  }
+  
+  .testimonial-author {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .author-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .nav-avatar {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .testimonial-nav-avatars {
+    gap: 12px;
+    margin-top: 40px;
+  }
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: var(--transition-1);
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  background-color: #128C7E;
+}
+
+.whatsapp-float:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
 /* Mobile Feature */
 .nav-open-btn {
   display: block;
