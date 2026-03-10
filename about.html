@@ -105,6 +105,15 @@
       border: 1px solid var(--white-alpha-10);
     }
 
+    /* static banner image that simply fits its container */
+    .story-banner img {
+      width: 100%;
+      height: 100%;                /* equal to container height */
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+    }
+
     /* Pillar / Values Section */
     .pillars-section {
       padding-block-start: 120px;
@@ -252,8 +261,8 @@
             </div>
 
             <div class="story-banner reveal">
-              <img src="./assets/images/wef.jpg" width="570" height="500" loading="lazy"
-                alt="About our kitchen" class="w-100" style="object-fit: cover;"> 
+              <img src="./assets/images/wef.jpg" width="570" height="570" loading="lazy"
+                alt="About our kitchen" class="w-100" style="object-fit: cover; object-position: top center; transition: transform 0.8s ease;">
             </div>
           </div>
 
@@ -337,15 +346,17 @@
       });
     });
 
-    // Parallax for Banner
-    gsap.to(".story-banner img", {
-      yPercent: 15,
-      ease: "none",
-      scrollTrigger: {
-        trigger: ".story-banner",
-        scrub: true
-      }
-    });
+    /* static banner image, no parallax effect */
+    // the image will fill its container with object-fit
+    // you can remove the GSAP call entirely if you don't need it
+    // gsap.to(".story-banner img", {
+    //   yPercent: 0,
+    //   ease: "none",
+    //   scrollTrigger: {
+    //     trigger: ".story-banner",
+    //     scrub: true
+    //   }
+    // });
   </script>
 
   <!-- 
