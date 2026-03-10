@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 const header = document.querySelector(".header");
 
 let lastScrollY = window.scrollY;
-let scrollTimer;
+// let scrollTimer;
 
 window.addEventListener("scroll", () => {
 
@@ -436,12 +436,12 @@ window.addEventListener("scroll", () => {
   lastScrollY = currentScroll;
 
   // detect stop scrolling
-  clearTimeout(scrollTimer);
-  scrollTimer = setTimeout(() => {
-    if (window.scrollY > 100) {
-      header.style.transform = "translateY(-100%)";
-    }
-  }, 200); // delay after scroll stops
+  // clearTimeout(scrollTimer);
+  // scrollTimer = setTimeout(() => {
+  //   if (window.scrollY > 100) {
+  //     header.style.transform = "translateY(-100%)";
+  //   }
+  // }, 200); // delay after scroll stops
 
 });
 
