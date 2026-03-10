@@ -416,33 +416,40 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 });
 
-const header = document.querySelector(".header");
-
-let lastScrollY = window.scrollY;
-let scrollTimer;
-
-window.addEventListener("scroll", () => {
-
-  const currentScroll = window.scrollY;
-
-  if (currentScroll > lastScrollY) {
-    // scrolling down
-    header.style.transform = "translateY(-100%)";
-  } else if (currentScroll < lastScrollY) {
-    // scrolling up
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScrollY = currentScroll;
-
-  // detect stop scrolling
-  clearTimeout(scrollTimer);
-  scrollTimer = setTimeout(() => {
-    if (window.scrollY > 100) {
-      header.style.transform = "translateY(-100%)";
-    }
-  }, 200); // delay after scroll stops
-
-});
+/*
+  The following legacy scroll listener moved/merged earlier in the
+  file.  It targeted `.header` directly which conflicted with the
+  new data-header logic used throughout.  Keeping it commented out
+  for reference; the header show/hide behavior is handled above by
+  the `window.addEventListener('scroll'` inside DOMContentLoaded.
+*/
+// const header = document.querySelector(".header");
+//
+// let lastScrollY = window.scrollY;
+// let scrollTimer;
+//
+// window.addEventListener("scroll", () => {
+//
+//   const currentScroll = window.scrollY;
+//
+//   if (currentScroll > lastScrollY) {
+//     // scrolling down
+//     header.style.transform = "translateY(-100%)";
+//   } else if (currentScroll < lastScrollY) {
+//     // scrolling up
+//     header.style.transform = "translateY(0)";
+//   }
+//
+//   lastScrollY = currentScroll;
+//
+//   // detect stop scrolling
+//   clearTimeout(scrollTimer);
+//   scrollTimer = setTimeout(() => {
+//     if (window.scrollY > 100) {
+//       header.style.transform = "translateY(-100%)";
+//     }
+//   }, 200); // delay after scroll stops
+//
+//});
 
 
